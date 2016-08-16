@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{D3E473F6-CDFA-4B7C-8C75-9281F17C5FDE}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>eventmgnt</RootNamespace>
+    <AssemblyName>eventmgnt</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>eventmgnt.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>eventmgnt.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=15.1.4.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\ASP.NET AJAX Control Toolkit\Bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="about.aspx" />
+    <Content Include="addevent.aspx" />
+    <Content Include="addvenue.aspx" />
+    <Content Include="approval.aspx" />
+    <Content Include="attend.aspx" />
+    <Content Include="bg.mp4" />
+    <Content Include="changepassword.aspx" />
+    <Content Include="contact.aspx" />
+    <Content Include="deleteevent.aspx" />
+    <Content Include="deleteparticipant.aspx" />
+    <Content Include="editevent.aspx" />
+    <Content Include="Fonts\alexbrush-regular-webfont.svg" />
+    <Content Include="Fonts\allura-regular-webfont.svg" />
+    <Content Include="Fonts\greatvibes-regular-webfont.svg" />
+    <Content Include="Fonts\lemonchi-webfont.svg" />
+    <Content Include="Fonts\loversquarrel-regular-webfont.svg" />
+    <Content Include="Fonts\montserrat-black-webfont.svg" />
+    <Content Include="Fonts\montserrat-light-webfont.svg" />
+    <Content Include="Fonts\montserrat-regular-webfont.svg" />
+    <Content Include="Fonts\mutlu__ornamental-webfont.svg" />
+    <Content Include="Fonts\opensans-bold-webfont.svg" />
+    <Content Include="Fonts\opensans-light-webfont.svg" />
+    <Content Include="Fonts\opensans-regular-webfont.svg" />
+    <Content Include="Fonts\roboto-bold-webfont.svg" />
+    <Content Include="Fonts\roboto-italic-webfont.svg" />
+    <Content Include="Fonts\roboto-light-webfont.svg" />
+    <Content Include="Fonts\roboto-regular-webfont.svg" />
+    <Content Include="getProfilePic.aspx" />
+    <Content Include="guest.aspx" />
+    <Content Include="ImageVB.aspx" />
+    <Content Include="manage.aspx" />
+    <Content Include="payment.aspx" />
+    <Content Include="Public\Images\cholo.jpg" />
+    <Content Include="Public\Images\glevinzon.jpg" />
+    <Content Include="Public\Images\inputlogin.png" />
+    <Content Include="Public\Images\loader.gif" />
+    <Content Include="Public\Images\minus.png" />
+    <Content Include="Public\Images\opm.gif" />
+    <Content Include="Public\Images\plus.png" />
+    <Content Include="Public\Images\saitama.jpg" />
+    <Content Include="Public\Videos\motion.mp4" />
+    <Content Include="redirect.aspx" />
+    <Content Include="Scripts\ASPSnippets_Pager.min.js" />
+    <Content Include="default.aspx" />
+    <Content Include="profile.aspx" />
+    <Content Include="Public\Images\calendar.jpg" />
+    <Content Include="Public\Images\glyphicons-46-calendar.png" />
+    <Content Include="Public\Images\glyphicons-7-user-add.png" />
+    <Content Include="register.aspx" />
+    <Content Include="Scripts\calendar-en.min.js" />
+    <Content Include="EventImageHandler.ashx" />
+    <Content Include="Fonts\loversquarrel-regular-webfont.eot" />
+    <Content Include="Fonts\loversquarrel-regular-webfont.ttf" />
+    <Content Include="Fonts\loversquarrel-regular-webfont.woff" />
+    <Content Include="Fonts\loversquarrel-regular-webfont.woff2" />
+    <Content Include="Fonts\lemonchi-webfont.eot" />
+    <Content Include="Fonts\lemonchi-webfont.ttf" />
+    <Content Include="Fonts\lemonchi-webfont.woff" />
+    <Content Include="Fonts\lemonchi-webfont.woff2" />
+    <Content Include="Fonts\alexbrush-regular-webfont.eot" />
+    <Content Include="Fonts\alexbrush-regular-webfont.ttf" />
+    <Content Include="Fonts\alexbrush-regular-webfont.woff" />
+    <Content Include="Fonts\alexbrush-regular-webfont.woff2" />
+    <Content Include="Fonts\greatvibes-regular-webfont.eot" />
+    <Content Include="Fonts\greatvibes-regular-webfont.ttf" />
+    <Content Include="Fonts\greatvibes-regular-webfont.woff" />
+    <Content Include="Fonts\greatvibes-regular-webfont.woff2" />
+    <Content Include="Fonts\opensans-bold-webfont.eot" />
+    <Content Include="Fonts\opensans-bold-webfont.ttf" />
+    <Content Include="Fonts\opensans-bold-webfont.woff" />
+    <Content Include="Fonts\opensans-bold-webfont.woff2" />
+    <Content Include="Fonts\opensans-light-webfont.eot" />
+    <Content Include="Fonts\opensans-light-webfont.ttf" />
+    <Content Include="Fonts\opensans-light-webfont.woff" />
+    <Content Include="Fonts\opensans-light-webfont.woff2" />
+    <Content Include="Fonts\opensans-regular-webfont.eot" />
+    <Content Include="Fonts\opensans-regular-webfont.ttf" />
+    <Content Include="Fonts\opensans-regular-webfont.woff" />
+    <Content Include="Fonts\opensans-regular-webfont.woff2" />
+    <Content Include="Fonts\roboto-bold-webfont.eot" />
+    <Content Include="Fonts\roboto-bold-webfont.ttf" />
+    <Content Include="Fonts\roboto-bold-webfont.woff" />
+    <Content Include="Fonts\roboto-bold-webfont.woff2" />
+    <Content Include="Fonts\roboto-italic-webfont.eot" />
+    <Content Include="Fonts\roboto-italic-webfont.ttf" />
+    <Content Include="Fonts\roboto-italic-webfont.woff" />
+    <Content Include="Fonts\roboto-italic-webfont.woff2" />
+    <Content Include="Fonts\roboto-light-webfont.eot" />
+    <Content Include="Fonts\roboto-light-webfont.ttf" />
+    <Content Include="Fonts\roboto-light-webfont.woff" />
+    <Content Include="Fonts\roboto-light-webfont.woff2" />
+    <Content Include="Fonts\roboto-regular-webfont.eot" />
+    <Content Include="Fonts\roboto-regular-webfont.ttf" />
+    <Content Include="Fonts\roboto-regular-webfont.woff" />
+    <Content Include="Fonts\roboto-regular-webfont.woff2" />
+    <Content Include="Fonts\mutlu__ornamental-webfont.eot" />
+    <Content Include="Fonts\mutlu__ornamental-webfont.ttf" />
+    <Content Include="Fonts\mutlu__ornamental-webfont.woff" />
+    <Content Include="Fonts\mutlu__ornamental-webfont.woff2" />
+    <Content Include="Fonts\allura-regular-webfont.eot" />
+    <Content Include="Fonts\allura-regular-webfont.ttf" />
+    <Content Include="Fonts\allura-regular-webfont.woff" />
+    <Content Include="Fonts\allura-regular-webfont.woff2" />
+    <Content Include="Fonts\montserrat-black-webfont.eot" />
+    <Content Include="Fonts\montserrat-black-webfont.ttf" />
+    <Content Include="Fonts\montserrat-black-webfont.woff" />
+    <Content Include="Fonts\montserrat-black-webfont.woff2" />
+    <Content Include="Fonts\montserrat-light-webfont.eot" />
+    <Content Include="Fonts\montserrat-light-webfont.ttf" />
+    <Content Include="Fonts\montserrat-light-webfont.woff" />
+    <Content Include="Fonts\montserrat-light-webfont.woff2" />
+    <Content Include="Fonts\montserrat-regular-webfont.eot" />
+    <Content Include="Fonts\montserrat-regular-webfont.ttf" />
+    <Content Include="Fonts\montserrat-regular-webfont.woff" />
+    <Content Include="Fonts\montserrat-regular-webfont.woff2" />
+    <Content Include="test.aspx" />
+    <Content Include="webadmin.aspx" />
+    <None Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery.dynDateTime.min.js" />
+    <Content Include="Scripts\js\bootstrap.js" />
+    <Content Include="Scripts\js\bootstrap.min.js" />
+    <Content Include="Scripts\js\npm.js" />
+    <Content Include="search.aspx" />
+    <Content Include="signin.aspx" />
+    <Content Include="Styles\basic.css" />
+    <Content Include="Styles\bg_slashed.css" />
+    <Content Include="Styles\calendar-blue.css" />
+    <Content Include="Styles\carousel.css" />
+    <Content Include="Styles\css\bootstrap-theme.css" />
+    <Content Include="Styles\css\bootstrap-theme.min.css" />
+    <Content Include="Styles\css\bootstrap.css" />
+    <Content Include="Styles\css\bootstrap.min.css" />
+    <Content Include="Styles\justified-nav.css" />
+    <Content Include="Styles\loading_css.css" />
+    <Content Include="Styles\loading_modal.css" />
+    <Content Include="Styles\search_Table.css" />
+    <Content Include="Styles\signin.css" />
+    <Content Include="Styles\sticky-footer.css" />
+    <Content Include="Styles\StyleSheet.css" />
+    <Content Include="successredirect.aspx" />
+    <Content Include="venue.aspx" />
+    <Content Include="view.aspx" />
+    <Content Include="viewprofile.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="about.aspx.designer.vb">
+      <DependentUpon>about.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="about.aspx.vb">
+      <DependentUpon>about.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="addevent.aspx.designer.vb">
+      <DependentUpon>addevent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addevent.aspx.vb">
+      <DependentUpon>addevent.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="addvenue.aspx.designer.vb">
+      <DependentUpon>addvenue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addvenue.aspx.vb">
+      <DependentUpon>addvenue.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="approval.aspx.designer.vb">
+      <DependentUpon>approval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="approval.aspx.vb">
+      <DependentUpon>approval.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="attend.aspx.designer.vb">
+      <DependentUpon>attend.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="attend.aspx.vb">
+      <DependentUpon>attend.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="changepassword.aspx.designer.vb">
+      <DependentUpon>changepassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="changepassword.aspx.vb">
+      <DependentUpon>changepassword.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="contact.aspx.designer.vb">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contact.aspx.vb">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.vb">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.vb">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="deleteevent.aspx.designer.vb">
+      <DependentUpon>deleteevent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="deleteevent.aspx.vb">
+      <DependentUpon>deleteevent.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="deleteparticipant.aspx.designer.vb">
+      <DependentUpon>deleteparticipant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="deleteparticipant.aspx.vb">
+      <DependentUpon>deleteparticipant.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="editevent.aspx.designer.vb">
+      <DependentUpon>editevent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="editevent.aspx.vb">
+      <DependentUpon>editevent.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="EventImageHandler.ashx.vb">
+      <DependentUpon>EventImageHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="getProfilePic.aspx.designer.vb">
+      <DependentUpon>getProfilePic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="getProfilePic.aspx.vb">
+      <DependentUpon>getProfilePic.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="guest.aspx.designer.vb">
+      <DependentUpon>guest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="guest.aspx.vb">
+      <DependentUpon>guest.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ImageVB.aspx.designer.vb">
+      <DependentUpon>ImageVB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImageVB.aspx.vb">
+      <DependentUpon>ImageVB.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="manage.aspx.designer.vb">
+      <DependentUpon>manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage.aspx.vb">
+      <DependentUpon>manage.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="payment.aspx.designer.vb">
+      <DependentUpon>payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="payment.aspx.vb">
+      <DependentUpon>payment.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="profile.aspx.designer.vb">
+      <DependentUpon>profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profile.aspx.vb">
+      <DependentUpon>profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="redirect.aspx.designer.vb">
+      <DependentUpon>redirect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="redirect.aspx.vb">
+      <DependentUpon>redirect.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="register.aspx.designer.vb">
+      <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="register.aspx.vb">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="search.aspx.designer.vb">
+      <DependentUpon>search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="search.aspx.vb">
+      <DependentUpon>search.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="signin.aspx.designer.vb">
+      <DependentUpon>signin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="signin.aspx.vb">
+      <DependentUpon>signin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="successredirect.aspx.designer.vb">
+      <DependentUpon>successredirect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="successredirect.aspx.vb">
+      <DependentUpon>successredirect.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.vb">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test.aspx.vb">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="venue.aspx.designer.vb">
+      <DependentUpon>venue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="venue.aspx.vb">
+      <DependentUpon>venue.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="VenueImageHandler.ashx.vb">
+      <DependentUpon>VenueImageHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="view.aspx.designer.vb">
+      <DependentUpon>view.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view.aspx.vb">
+      <DependentUpon>view.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="viewprofile.aspx.designer.vb">
+      <DependentUpon>viewprofile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewprofile.aspx.vb">
+      <DependentUpon>viewprofile.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="webadmin.aspx.designer.vb">
+      <DependentUpon>webadmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="webadmin.aspx.vb">
+      <DependentUpon>webadmin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="VenueImageHandler.ashx" />
+    <Content Include="Styles\css\bootstrap-theme.css.map" />
+    <Content Include="Styles\css\bootstrap.css.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2352/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
